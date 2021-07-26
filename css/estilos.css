@@ -1,0 +1,229 @@
+.fondo {
+  background-color: black;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.reproductor .view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 400;
+}
+
+.reproductor .plane {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+}
+
+.reproductor .plane.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  animation: rotate 20s infinite linear;
+}
+
+.reproductor .plane.main .circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
+}
+
+.reproductor .plane.main .circle::before, .reproductor .plane.main .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: crimson;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px 2px crimson;
+}
+
+.reproductor .plane.main .circle::before {
+  transform: translateZ(-90px);
+}
+
+.reproductor .plane.main .circle::after {
+  transform: translateZ(90px);
+}
+
+.reproductor .plane.main .circle:nth-child(1) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+
+.reproductor .plane.main .circle:nth-child(2) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+
+.reproductor .plane.main .circle:nth-child(3) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+
+.reproductor .plane.main .circle:nth-child(4) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+
+.reproductor .plane.main .circle:nth-child(5) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+
+.selector body {
+  background-color: black;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.selector .contenedor {
+  width: 50%;
+  position: relative;
+  float: left;
+  padding: 15px;
+}
+
+.selector .contenedor figure {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.selector .contenedor figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+
+.selector .contenedor figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.897);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.selector .contenedor .capa h1 {
+  color: red;
+}
+
+.selector .contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.selector .contenedor figure:hover > .capa h3 {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.selector .contenedor figure:hover > img {
+  transform: scale(1.3);
+}
+
+.selector .contenedor figure .capa h3 {
+  color: white;
+  font-weight: 400px;
+  margin: bottom 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px;
+}
+
+.selector .contenedor figure .capa p {
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+.selector .contenedor2 {
+  width: 50%;
+  position: relative;
+  float: left;
+  padding: 15px;
+}
+
+.selector .contenedor2 figure {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.selector .contenedor2 figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+
+.selector .contenedor2 figure .capa2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.897);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.selector .contenedor2 figure:hover > .capa2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.selector .contenedor2 figure:hover > .capa2 h3 {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.selector .contenedor2 figure:hover > img {
+  transform: scale(1.3);
+}
+
+.selector .contenedor2 figure .capa2 h3 {
+  color: white;
+  font-weight: 400px;
+  margin: bottom 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px;
+}
+
+.selector .contenedor2 figure .capa2 p {
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+/*# sourceMappingURL=estilos.css.map */
